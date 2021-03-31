@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pet-tags-ngrx"
+    }
+  },
+  "defaultProject": "pet-tags-ngrx",
+  "cli": {
+    "analytics": "874be507-b35c-48b0-ae6a-bf3d6ce7f63d"
+  }
 }
