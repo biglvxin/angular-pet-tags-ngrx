@@ -12,6 +12,8 @@ import { petTagReducer } from './models/pet-tag.reducer';
 import { TagShapeComponent } from './pages/create/tag-shape/tag-shape.component';
 import { FormsModule } from '@angular/forms';
 import { TagTextComponent } from './pages/create/tag-text/tag-text.component';
+import { TagExtrasComponent } from './pages/create/tag-extras/tag-extras.component';
+import { TagPreviewComponent } from './tag-preview/tag-preview.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { TagTextComponent } from './pages/create/tag-text/tag-text.component';
     CreateComponent,
     CompleteComponent,
     TagShapeComponent,
-    TagTextComponent
+    TagTextComponent,
+    TagExtrasComponent,
+    TagPreviewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,21 @@
 import { Action } from '@ngrx/store';
 import { PetTagActions } from './pet-tag.actions';
 import { initialTag, PetTag } from './pet-tag.model';
-
-export function petTagReducer(state: PetTag = initialTag, action: Action) {
-    console.log(state);
-    console.log(action);
+// Action 会报错
+// export function petTagReducer(state: PetTag = initialTag, action: Action) {
+export function petTagReducer(state: PetTag = initialTag, action: any) {
     switch (action.type) {
         case PetTagActions.SELECT_SHAPE:
             return Object.assign({}, state, {
-                shape: state.shape
+                shape: action.payload
             });
         case PetTagActions.SELECT_FONT:
             return Object.assign({}, state, {
-                font: state.font
+                font: action.payload
             });
         case PetTagActions.ADD_TEXT:
             return Object.assign({}, state, {
-                text: state.text
+                text: action.payload
             });
         case PetTagActions.TOGGLE_CLIP:
             return Object.assign({}, state, {
@@ -28,7 +27,7 @@ export function petTagReducer(state: PetTag = initialTag, action: Action) {
             });
         case PetTagActions.COMPLETE:
             return Object.assign({}, state, {
-                complete: state.complete
+                complete: action.payload
             });
         case PetTagActions.RESET:
             return Object.assign({}, state, initialTag);
